@@ -1,0 +1,520 @@
+* {
+    /* border: 1px solid grey; */
+    background-color: #1e1e1e;
+    color: white;
+    line-height: 1.75;
+    scroll-margin-top: 2px;
+    scroll-behavior: smooth;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* css for navigation bar */
+
+nav {
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    right: 2%;
+    font-size: 0.9em;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a.hoverblue:hover {
+    color:#9ddcfe;
+}
+
+nav a.hovergreen:hover {
+    color:#a9ff85;
+}
+
+nav a.hoverbrown:hover {
+    color:#ff6363;
+}
+
+nav a.hoveryellow:hover {
+    color:#fed602
+}
+
+nav a.hoverblue:active,
+nav a.hovergreen:active,
+nav a.hoverbrown:active,
+nav a.hoveryellow:active {
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+}
+
+body {
+    padding: 0 15%;
+    font-size: 1.1em;
+}
+
+/* hero page and divs inside landing screen */
+
+.heropage {
+    display: flex;
+    align-items: center;
+}
+
+.maincolumn1 {
+    margin-top: 10px;
+    flex: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.maincolumn2 {
+    margin-top: 10px;
+    flex: 55%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    max-height: 50px;
+    height: 100%;
+    margin-bottom: 25%;
+}
+
+.summary {
+    width: fit-content;
+    margin-top: 5%;
+    font-size: calc(8px + 0.6vw);
+}
+
+/* profile picture on landing page */
+
+section div img {
+    max-height: auto;
+    max-width: 80%;
+    min-width: 100px;
+    object-fit: contain;
+    align-items: center;
+}
+
+/* css properties for headers */
+
+h1 {
+    width: fit-content;
+    display: wrap;
+    font-size: 3vw;
+}
+
+h2 {
+    font-weight: 500;
+    padding-top: 0%;
+    text-align: center;
+}
+
+/* h3 {
+    width: fit-content;
+    font-style: normal;
+    font-weight: 500px;
+} */
+
+/* specific tags for colored fonts */
+
+.greenfont {
+    color: #a9ff85;
+}
+
+.bluefont {
+    color:#9ddcfe;
+}
+
+.yellowfont {
+    color: #fed602;
+}
+
+.brownfont {
+    color: #ff6363;
+}
+
+/* animated type font color */
+
+.auto-type {
+    color:#9ddcfe;
+    font-size: 3vw;
+}
+
+/* introductory paragraph after scrolling */
+
+p.intropara {
+    line-height: 3.25;
+    padding-bottom: 120px;
+    font-size: calc(12px +1.3vw);
+    margin-top: 20%;
+}
+
+/* Tooltip Text */
+
+.tooltip {
+    position: relative;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #FFF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    width: 450px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+/* portfolio section of page */
+
+.columns-cases {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.casestudies {
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    overflow: hidden;
+    position: relative;
+}
+
+.casestudytext {
+    position: absolute;
+    transform: translateY(14rem);
+    height:fit-content;
+    background: none;
+}
+
+.casestudies h3 {
+    border: 1px solid white;
+    background: none;
+    margin-left: 10px;
+    margin-right:10px;
+    padding: 0 10px;
+}
+
+.casestudies p {
+    opacity: 0;
+    background: none;
+    margin-left: 10px;
+    margin-right:10px;
+    padding: 0 10px;
+}
+
+.casestudies img {
+    max-width: 100%;
+}
+
+/* hover css properities for portfolio cards */
+
+.casestudies:hover img {
+    max-width: 100%;
+    display: block;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+    opacity: 8%;
+}
+
+.casestudies:hover .casestudytext {
+    position: absolute;
+    text-align: center;
+    transform: translateY(5rem);
+    transition: all 0.3s ease-out, 0.5;
+    opacity: 1;
+    background: none;
+}
+
+.casestudies:hover p {
+    opacity: 1;
+}
+
+.casestudies:hover h3,
+.casestudies:hover p {
+    background: none;
+    border: none;
+}
+
+/* form css for contact form */
+
+form {
+    margin: 50px auto;
+    width: 60%;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.form-item label {
+    align-self: flex-start;
+    font-size: 20px;
+    padding-left: 7px;
+}
+
+.form-item input,
+.form-item textarea {
+    border: 2px solid #41403d;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 7px;
+}
+
+.form-item button {
+    width: 200px;
+    display: inline-block;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    color: white;
+    border-style: solid;
+    font-size: 20px;
+    border-radius: 7px;
+    border: 2px solid white;
+}
+
+/* hover, active, focus state on form */
+
+.form-item #name:hover {
+    border: 3px solid #9ddcfe;
+}
+
+.form-item #email:hover {
+    border: 3px solid #ff6363;
+}
+
+.form-item textarea:hover {
+    border: 3px solid #fed602;
+}
+
+.form-item button:active {
+    border: 2px solid white;
+    background-color: #3fb50c;
+    color: #FFF;
+}
+
+.form-item button:hover {
+    border: 2px solid #3fb50c;
+    background-color: #1e1e1e;
+    color: #3fb50c;
+}
+
+/* scroll to top button css properities */
+
+.top {
+    position: fixed;
+    right: 3%;
+    bottom: 12%;
+    height: 20px;
+    width: auto;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: 0.5s;
+    text-decoration: none;
+    background: none;
+}
+
+.top p {
+    border: 1px white solid;
+    padding: 1px 10px;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.top.show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.top:hover span,
+.top:hover p {
+    background-color: white;
+    color:#1e1e1e;
+    text-decoration: none;
+}  
+
+.top:active span,
+.top:active p {
+    background-color: white;
+    color:white;
+    text-decoration: none;
+}  
+
+@media (max-width: 650px) {
+   
+    body {
+        padding: 0 5%;
+    }
+
+    section div p {
+        width: 100%;
+        align-items: center;
+    }
+
+    p.intropara {
+        line-height: 2;
+        padding-bottom: 0;
+        margin-top: 5px;
+        font-size: 12px;
+
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 4vw;
+        margin-top: 5%;
+        padding-left: 0%;
+        display: inline-block;
+    }
+
+    .auto-type {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 3.3vw;
+    }
+
+    h3 {
+        width: fit-content;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.2vw;
+    }
+
+    form {
+        margin: 10px auto;
+        width: 100%;
+    }
+    
+    .form-item {
+        margin-bottom: 10px;
+        padding: 3px;
+    }
+
+    .form-item label {
+        font-size:  14px;
+    }
+    
+    .form-item input,
+    .form-item textarea {
+        padding: 2px;
+        font-size: 14px;
+        margin-top: 2px;
+        border-radius: 7px;
+    }
+    
+    .form-item button {
+        width: 150px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: right;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        top: 0;
+        right: 2%;
+        font-size: 0.7em;
+    }
+    
+    nav a {
+        text-decoration: none;
+        padding: 10px 10px;
+    }
+
+    .columns-cases {
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    .columns-cases .casestudies {
+        width: 80%;
+        height: 30vh;
+    }
+
+    .casestudies h3 {
+        font-size: 3vw;
+    }
+
+    .casestudytext {
+        transform: translateY(9rem);
+        opacity: 1;
+    }
+
+    .casestudies:hover .casestudytext {
+        transform: translateY(2rem);
+    }
+
+    .casestudies p {
+        font-size: 12px;
+        text-align: start;
+    }
+
+    .container {
+        margin-bottom: 0%;
+        min-height: 20vh;
+        padding-left: 15vw;
+        width: 80%;
+    }
+
+    .summary {
+        font-size: 15px;
+        font-weight: 400;
+        display: inline-block;
+        
+    }
+
+    .heropage {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maincolumn2 {
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+        display: flex;
+        
+    }
+
+    .maincolumn1 {
+        width: 100%;
+        margin-top: 0;
+    }
+ 
+}
+
